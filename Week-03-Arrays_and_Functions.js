@@ -26,7 +26,7 @@ myTodoList.push('buy groceries');
 myTodoList.push('go to the bank');
 console.log(myTodoList);
 // remove the second item in the array
-delete myTodoList[1];
+myTodoList.splice(1,1);
 console.log(myTodoList);
 // create another array, yourTodoList, and add two todo items
 let yourTodoList = [];
@@ -53,12 +53,15 @@ return ourTodoList.reverse();
 console.log(ourTodoList);
 // create a function called addingMachine that will add all passed numbers and return the total
 // Note: you don't know how many numbers will be passed
-let numbers = [];
-numbers.push();
-
+let numbers = [1, 2, 3, 4];
 function addingMachine(numbers){
-    return numbers
+for(let i = 0; i < numbers.lenght; i++){
+    
+    total += numbers;
 }
+return total
+}
+
 
 
 // You just signed a contract as an estimator for a restoration company. 
@@ -68,5 +71,9 @@ function addingMachine(numbers){
 // 40% on all profits above $1,000,000
 // create a function that will allow you to check how much of a bonus you make
 // the function should take in two variables as arguments, grossInvoiced and profitMargin
-
+let grossInvoiced = ();
+let profitMargin = ();
+function profits(){
+    
+}
 
