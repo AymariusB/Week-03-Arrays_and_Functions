@@ -120,25 +120,45 @@ myAverage(60, 20);
 
 // 11.	Write a function that takes two arrays of numbers and returns true if the average of 
 //the elements in the first array is greater than the average of the elements in the second array.
-
 function greaterAverage(arrayOne, arrayTwo){
+    console.log('This is my parameters:',arrayOne,arrayTwo);
+    let avrOne = 0;
+    let avrTwo = 0;
     let sumOne = 0;
-    for(let i = 0; i < arrayOne.lenght; i++){
-        sumOne += arrayOne[i];
-        let avrOne = sumOne / arrayOne.lenght;
-    }
     let sumTwo = 0;
-    for(let i = 0; i < arrayTwo.lenght; i++){
+    for(let i = 0; i < arrayOne.length; i++){
+     sumOne += arrayOne[i]; // sum's up all numbers in arrayOne
+     console.log(i,'This is sumOne is for loop:', sumOne);// always log each step to help debug my code at this point in time
+    }
+    avrOne = sumOne / arrayOne.length;
+    for(let i = 0; i < arrayTwo.length; i++){
         sumTwo += arrayTwo[i];
-        let avrTwo = sumTwo / arrayTwo.lenght;
+        console.log(i,'This is sumTwo is for loop:', sumTwo);
+    }
+    avrTwo = sumTwo / arrayTwo.length;
         if(avrOne > avrTwo){
+            console.log('average one is greater than average two:', avrOne, 'vs', avrTwo);
             console.log(true);
         
         }else{
             console.log(false);
         }
-    } 
- }
+}
+let myArrayOne = [2, 7, 52];
+let myArrayThree = [41, 6, 88, 81];
+greaterAverage(myArrayThree,myArrayOne);
 
+// 12.	Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket,
+// and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
 
+function willBuyDrink(isHotOutside, moneyInPocket){
+  console.log(isHotOutside && moneyInPocket > 10.50);
+}
+willBuyDrink(true, 20);
 
+// My function will hold three parameters Street address, zip cod and phone number to create a full address.
+
+function fullAddress( streetAddress, zipCode, phoneNum){
+    console.log(streetAddress + ' ' + zipCode + ' ' + phoneNum);
+}
+fullAddress('3244 Highway Blvd','68533','402-845-5232');
